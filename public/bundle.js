@@ -26427,9 +26427,18 @@
 
 	var About = function About(props) {
 	  return React.createElement(
-	    'h3',
+	    'div',
 	    null,
-	    'About Component'
+	    React.createElement(
+	      'h3',
+	      null,
+	      'About'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'This is my first React Web App. Get the temperature of any city you type in, degrees are in Farenheit because the US can\'t seem to read the temperature in any other type of measurements.'
+	    )
 	  );
 	};
 
