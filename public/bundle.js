@@ -26698,7 +26698,7 @@
 	    null,
 	    React.createElement(
 	      'h1',
-	      { className: 'text-center' },
+	      { className: 'text-center page-title' },
 	      'Examples'
 	    ),
 	    React.createElement(
@@ -26724,7 +26724,34 @@
 	        React.createElement(
 	          Link,
 	          { to: '/?location=Rio' },
-	          'Rio de Janeiro'
+	          'Rio de Janeiro, Brazil'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Austin' },
+	          'Austin, TX'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Seattle' },
+	          'Seattle, WA'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Amsterdam' },
+	          'Amsterdam, Netherlands'
 	        )
 	      )
 	    )
@@ -27117,7 +27144,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title{\n  font-family: chalkduster;\n}\n.weatherButt{\n  border-radius: 25px;\n}\n.mainBody{\n  background-color: #73EAFF;\n  height: 900px;\n  font-family: chalkduster;\n}\n.weatherSearch{\n  font-family: chalkduster;\n  position: relative;\n  top: 175px;\n}\n", ""]);
+	exports.push([module.id, ".page-title{\n  font-family: chalkduster;\n}\n.weatherButt{\n  border-radius: 25px;\n}\n.mainBody{\n  font-family: chalkduster;\n}\n.weatherSearch{\n  font-family: chalkduster;\n  position: relative;\n  top: 175px;\n}\n", ""]);
 
 	// exports
 
