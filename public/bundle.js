@@ -24952,7 +24952,14 @@
 
 	  onSearch: function onSearch(e) {
 	    e.preventDefault();
-	    alert('Not yet wired up');
+
+	    var location = this.refs.search.value;
+	    var encodedLocation = encodeURIComponent(location);
+
+	    if (location.length > 0) {
+	      this.refs.search.value = '';
+	      window.location.hash = '#/?location=' + encodedLocation;
+	    }
 	  },
 	  render: function render() {
 	    return React.createElement(
@@ -25010,7 +25017,7 @@
 	            React.createElement(
 	              'li',
 	              null,
-	              React.createElement('input', { type: 'search', placeholder: 'Enter City Name' })
+	              React.createElement('input', { type: 'search', placeholder: 'Enter City Name', ref: 'search' })
 	            ),
 	            React.createElement(
 	              'li',
@@ -25049,7 +25056,9 @@
 
 	    this.setState({
 	      isLoading: true,
-	      errorMessage: undefined
+	      errorMessage: undefined,
+	      location: undefined,
+	      temp: undefined
 	    });
 
 	    openWeatherMap.getTemp(location).then(function (temp) {
@@ -25064,6 +25073,22 @@
 	        errorMessage: e.message
 	      });
 	    });
+	  },
+	  componentDidMount: function componentDidMount() {
+	    var location = this.props.location.query.location;
+
+	    if (location && location.length > 0) {
+	      this.handleSearch(location);
+	      window.location.hash = '#/';
+	    }
+	  },
+	  componentWillReceiveProps: function componentWillReceiveProps(newProps) {
+	    var location = newProps.location.query.location;
+
+	    if (location && location.length > 0) {
+	      this.handleSearch(location);
+	      window.location.hash = '#/';
+	    }
 	  },
 	  render: function render() {
 	    var _state = this.state;
@@ -27144,7 +27169,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title {\n  font-family: chalkduster;\n  color: #4DA4E0; }\n\n.weatherButt {\n  border-radius: 25px; }\n\n.mainBody {\n  font-family: chalkduster; }\n\n.weatherSearch {\n  font-family: chalkduster;\n  position: relative;\n  top: 175px; }\n\ninput[type=search] {\n  box-shadow: none; }\n", ""]);
+	exports.push([module.id, ".page-title {\n  font-family: chalkduster;\n  color: #4DA4E0; }\n\n.weatherButt {\n  border-radius: 25px; }\n\n.mainBody {\n  font-family: chalkduster; }\n\n.weatherSearch {\n  font-family: chalkduster;\n  position: relative;\n  top: 125px;\n  bottom: 125px; }\n\ninput[type=search] {\n  box-shadow: none; }\n", ""]);
 
 	// exports
 

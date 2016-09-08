@@ -1,4 +1,4 @@
-$space-title: 175px;
+$space-title: 125px;
 $title-color: #4DA4E0;
 
 .page-title{
@@ -15,6 +15,7 @@ $title-color: #4DA4E0;
   font-family: chalkduster;
   position: relative;
   top: $space-title;
+  bottom: $space-title;
 }
 input[type=search]{
   box-shadow: none;
