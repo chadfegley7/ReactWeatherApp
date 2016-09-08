@@ -25010,7 +25010,7 @@
 	            React.createElement(
 	              'li',
 	              null,
-	              React.createElement('input', { type: 'search', placeholder: 'Search Weather' })
+	              React.createElement('input', { type: 'search', placeholder: 'Enter City Name' })
 	            ),
 	            React.createElement(
 	              'li',
@@ -25136,7 +25136,7 @@
 	      React.createElement(
 	        "form",
 	        { onSubmit: this.onFormSubmit },
-	        React.createElement("input", { type: "text", ref: "location", placeholder: "Enter City Name" }),
+	        React.createElement("input", { type: "search", ref: "location", placeholder: "Enter City Name" }),
 	        React.createElement(
 	          "button",
 	          { className: "button expanded weatherButt" },
@@ -27125,8 +27125,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./app.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./app.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./app.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./app.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27144,7 +27144,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title{\n  font-family: chalkduster;\n}\n.weatherButt{\n  border-radius: 25px;\n}\n.mainBody{\n  font-family: chalkduster;\n}\n.weatherSearch{\n  font-family: chalkduster;\n  position: relative;\n  top: 175px;\n}\n", ""]);
+	exports.push([module.id, ".page-title {\n  font-family: chalkduster;\n  color: #4DA4E0; }\n\n.weatherButt {\n  border-radius: 25px; }\n\n.mainBody {\n  font-family: chalkduster; }\n\n.weatherSearch {\n  font-family: chalkduster;\n  position: relative;\n  top: 175px; }\n\ninput[type=search] {\n  box-shadow: none; }\n", ""]);
 
 	// exports
 

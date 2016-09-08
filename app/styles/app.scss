@@ -1,5 +1,9 @@
+$space-title: 175px;
+$title-color: #4DA4E0;
+
 .page-title{
   font-family: chalkduster;
+  color: $title-color;
 }
 .weatherButt{
   border-radius: 25px;
@@ -10,5 +14,8 @@
 .weatherSearch{
   font-family: chalkduster;
   position: relative;
-  top: 175px;
+  top: $space-title;
+}
+input[type=search]{
+  box-shadow: none;
 }
