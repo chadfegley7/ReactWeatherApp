@@ -26537,19 +26537,58 @@
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166);
+
+	var Link = _require.Link;
+
+
 	var About = function About(props) {
 	  return React.createElement(
 	    'div',
 	    null,
 	    React.createElement(
 	      'h3',
-	      null,
+	      { className: 'text-center' },
 	      'About'
 	    ),
 	    React.createElement(
 	      'p',
 	      null,
-	      'This is my first React Web App. Get the temperature of any city you type in, degrees are in Farenheit because the US can\'t seem to read the temperature in any other type of measurements.'
+	      'This is my first React Web App. I learned all about webpacks, stateless functionial components, arrow functions and so much more. There\'s more to come in the future to make this app better the more I learn.',
+	      React.createElement('br', null),
+	      React.createElement('br', null),
+	      ' Here\'s a link to the github repository if you would like to take a look at my code:'
+	    ),
+	    React.createElement(
+	      'ul',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          'a',
+	          { href: 'https://github.com/chadfegley7' },
+	          'Github Code'
+	        )
+	      )
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'Also, to retrieve the weather information I am using Open Weather Map API located here:'
+	    ),
+	    React.createElement(
+	      'ul',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          'a',
+	          { href: 'http://openweathermap.org/' },
+	          'Open Weather Map API'
+	        )
+	      )
 	    )
 	  );
 	};
