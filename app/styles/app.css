@@ -1,0 +1,16 @@
+.page-title{
+  font-family: chalkduster;
+}
+.weatherButt{
+  border-radius: 25px;
+}
+.mainBody{
+  background-color: #73EAFF;
+  height: 900px;
+  font-family: chalkduster;
+}
+.weatherSearch{
+  font-family: chalkduster;
+  position: relative;
+  top: 175px;
+}

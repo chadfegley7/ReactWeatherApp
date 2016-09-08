@@ -113,6 +113,9 @@
 	__webpack_require__(254);
 	$(document).foundation();
 
+	//App css
+	__webpack_require__(258);
+
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { history: hashHistory },
@@ -24914,14 +24917,14 @@
 	var Main = function Main(props) {
 	  return React.createElement(
 	    'div',
-	    null,
+	    { className: 'mainBody' },
 	    React.createElement(Nav, null),
 	    React.createElement(
 	      'div',
 	      { className: 'row' },
 	      React.createElement(
 	        'div',
-	        { className: 'columns medium-6 large-4 small-centered' },
+	        { className: 'columns medium-6 large-4 small-centered weatherSearch' },
 	        props.children
 	      )
 	    )
@@ -25012,7 +25015,7 @@
 	            React.createElement(
 	              'li',
 	              null,
-	              React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
+	              React.createElement('input', { type: 'submit', className: 'button weatherButt', value: 'Get Weather' })
 	            )
 	          )
 	        )
@@ -25093,8 +25096,8 @@
 	      null,
 	      React.createElement(
 	        'h1',
-	        { className: 'text-center' },
-	        'Get Weather'
+	        { className: 'text-center page-title' },
+	        'REACT-ive Weather'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      renderMessage(),
@@ -25136,7 +25139,7 @@
 	        React.createElement("input", { type: "text", ref: "location", placeholder: "Enter City Name" }),
 	        React.createElement(
 	          "button",
-	          { className: "button expanded" },
+	          { className: "button expanded weatherButt" },
 	          "Get Weather"
 	        )
 	      )
@@ -26617,8 +26620,8 @@
 	    'div',
 	    null,
 	    React.createElement(
-	      'h3',
-	      { className: 'text-center' },
+	      'h1',
+	      { className: 'text-center page-title' },
 	      'About'
 	    ),
 	    React.createElement(
@@ -27077,6 +27080,46 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
+
+
+/***/ },
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(259);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(257)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./app.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./app.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(256)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".page-title{\n  font-family: chalkduster;\n}\n.weatherButt{\n  border-radius: 25px;\n}\n.mainBody{\n  background-color: #73EAFF;\n  height: 900px;\n  font-family: chalkduster;\n}\n.weatherSearch{\n  font-family: chalkduster;\n  position: relative;\n  top: 175px;\n}\n", ""]);
+
+	// exports
 
 
 /***/ }
