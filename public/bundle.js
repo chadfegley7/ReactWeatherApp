@@ -26567,7 +26567,7 @@
 	        null,
 	        React.createElement(
 	          'a',
-	          { href: 'https://github.com/chadfegley7' },
+	          { href: 'https://github.com/chadfegley7/ReactWeatherApp' },
 	          'Github Code'
 	        )
 	      )
