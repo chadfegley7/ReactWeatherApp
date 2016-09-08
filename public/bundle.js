@@ -25067,7 +25067,7 @@
 	      if (isLoading) {
 	        return React.createElement(
 	          'h3',
-	          null,
+	          { className: 'text-center' },
 	          'Fetching Weather...'
 	        );
 	      } else if (temp && location) {
@@ -25080,7 +25080,7 @@
 	      null,
 	      React.createElement(
 	        'h1',
-	        null,
+	        { className: 'text-center' },
 	        'Get Weather'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
@@ -25122,7 +25122,7 @@
 	        React.createElement("input", { type: "text", ref: "location", placeholder: "Enter City Name" }),
 	        React.createElement(
 	          "button",
-	          null,
+	          { className: "button expanded" },
 	          "Get Weather"
 	        )
 	      )
@@ -25136,7 +25136,7 @@
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -25145,11 +25145,11 @@
 	  var location = _ref.location;
 
 	  return React.createElement(
-	    'h3',
-	    null,
-	    'It is ',
+	    "h3",
+	    { className: "text-center" },
+	    "It is ",
 	    temp,
-	    ' in ',
+	    "°F in ",
 	    location
 	  );
 	};
@@ -26554,7 +26554,7 @@
 	    React.createElement(
 	      'p',
 	      null,
-	      'This is my first React Web App. I learned all about webpacks, stateless functionial components, arrow functions and so much more. There\'s more to come in the future to make this app better the more I learn.',
+	      'This is my first React Web App which is a weather app. I learned all about webpacks, stateless functionial components, arrow functions and so much more. There\'s more to come in the future to make this app better the more I learn.',
 	      React.createElement('br', null),
 	      React.createElement('br', null),
 	      ' Here\'s a link to the github repository if you would like to take a look at my code:'
@@ -26575,7 +26575,7 @@
 	    React.createElement(
 	      'p',
 	      null,
-	      'Also, to retrieve the weather information I am using Open Weather Map API located here:'
+	      'Here are some of the tools that I used to create this app:'
 	    ),
 	    React.createElement(
 	      'ul',
@@ -26585,9 +26585,20 @@
 	        null,
 	        React.createElement(
 	          'a',
+	          { href: 'https://facebook.github.io/react' },
+	          'React'
+	        ),
+	        ' - This was the JavaScript framework used.'
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          'a',
 	          { href: 'http://openweathermap.org/' },
 	          'Open Weather Map API'
-	        )
+	        ),
+	        ' - Where to retrieve my weather information.'
 	      )
 	    )
 	  );
